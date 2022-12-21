@@ -10,7 +10,9 @@ function BookList(props) {
         name={book.name}
         quantity={book.quantity}
         price={book.price}
-      />
+        deleteBook={props.deleteBook}
+      ></Book>
+     
     ))}
   </ul>
   )

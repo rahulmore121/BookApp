@@ -18,7 +18,9 @@ function AddBook(props) {
     };
 
     props.onAddBook(book);
-
+    name.current.value= ''
+    quantity.current.value= ''
+    price.current.value=''
   }
 
 
@@ -28,15 +30,15 @@ function AddBook(props) {
     <form onSubmit={submitHandler}>
       <div className={classes.control}>
         <label htmlFor='title'>Name</label>
-        <input type='text' id='title' ref={name} />
+        <input required type='text' id='title' ref={name} />
       </div>
       <div className={classes.control}>
         <label htmlFor='opening-text'>Quantity</label>
-        <input type='text' id='title' ref={quantity} />
+        <input required type='text' id='title' ref={quantity} />
       </div>
       <div className={classes.control}>
         <label htmlFor='date'>Price</label>
-        <input type='text' id='date' ref={price} />
+        <input required type='text' id='date' ref={price} />
       </div>
       <button>Add Book</button>
     </form>
